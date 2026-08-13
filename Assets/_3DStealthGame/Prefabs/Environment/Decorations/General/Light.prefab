@@ -138,8 +138,8 @@ MonoBehaviour:
   flickeringLight: {fileID: 3924353436566493084}
   flickeringRenderer: {fileID: 23500773110727602}
   flickerMode: 0
-  lightIntensityMin: 1.5
-  lightIntensityMax: 3.5
+  lightIntensityMin: 123
+  lightIntensityMax: 125
   flickerDuration: 0.075
   intensityCurve:
     serializedVersion: 2
@@ -157,7 +157,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86e0f005f0b8e084698c2cf61bb6c2b6, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 86e0f005f0b8e084698c2cf61bb6c2b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
@@ -263,7 +263,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd7f55e125ee8f947b2f399e20aeec8c, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: dd7f55e125ee8f947b2f399e20aeec8c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
