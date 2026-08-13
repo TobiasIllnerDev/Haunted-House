@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private List<string> m_OwnedKeys = new List<string>();
     Animator m_Animator;
     public InputAction MoveAction;
     AudioSource m_AudioSource;
@@ -56,5 +57,14 @@ public class PlayerMovement : MonoBehaviour
         {
             m_AudioSource.Stop();
         }
+    }
+    public void AddKey(string keyName)
+    {
+        m_OwnedKeys.Add(keyName);
+    }
+
+    public bool OwnKey(string keyName)
+    {
+        return m_OwnedKeys.Contains(keyName);
     }
 }

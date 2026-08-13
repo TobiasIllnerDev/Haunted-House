@@ -138,8 +138,8 @@ MonoBehaviour:
   flickeringLight: {fileID: 3924353436566493084}
   flickeringRenderer: {fileID: 23500773110727602}
   flickerMode: 0
-  lightIntensityMin: 123
-  lightIntensityMax: 125
+  lightIntensityMin: 1.5
+  lightIntensityMax: 3.5
   flickerDuration: 0.075
   intensityCurve:
     serializedVersion: 2
