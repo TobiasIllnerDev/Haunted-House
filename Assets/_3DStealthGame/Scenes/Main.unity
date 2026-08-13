@@ -215,6 +215,8 @@ MonoBehaviour:
   displayImageDuration: 1
   player: {fileID: 1471362234}
   uiDocument: {fileID: 1430181744}
+  exitAudio: {fileID: 951109042}
+  caughtAudio: {fileID: 1294023995}
 --- !u!65 &231636576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1050,7 +1052,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c0f716a9e9ac00c438b95158ba195a58, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1276,7 +1278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1151395904}
   - component: {fileID: 1151395903}
-  - component: {fileID: 1151395902}
   - component: {fileID: 1151395906}
   - component: {fileID: 1151395905}
   m_Layer: 0
@@ -1286,14 +1287,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1151395902
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151395901}
-  m_Enabled: 1
 --- !u!20 &1151395903
 Camera:
   m_ObjectHideFlags: 0
@@ -1512,7 +1505,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 2789d5ce62baaba4ab1ee8bb172304a6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
