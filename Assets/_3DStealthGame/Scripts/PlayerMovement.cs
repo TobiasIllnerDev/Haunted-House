@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Animator m_Animator;
     public InputAction MoveAction;
+    AudioSource m_AudioSource;
 
     public float walkSpeed = 1.0f;
     public float turnSpeed = 20f;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         m_Rigibody = GetComponent<Rigidbody>();
         MoveAction.Enable();
         m_Animator = GetComponent<Animator>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -42,5 +44,17 @@ public class PlayerMovement : MonoBehaviour
 
         m_Rigibody.MoveRotation(m_Rotation);
         m_Rigibody.MovePosition(m_Rigibody.position + m_Movement * walkSpeed * Time.deltaTime);
+
+        if (isWalking)
+        {
+            if (!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop();
+        }
     }
 }
