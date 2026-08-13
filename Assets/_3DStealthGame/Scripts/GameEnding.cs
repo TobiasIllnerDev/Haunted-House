@@ -60,12 +60,14 @@ public class GameEnding : MonoBehaviour
         if (other.gameObject == player)
         {
             m_IsPlayerAtExit = true;
+            m_Demo_GameTimerIsTicking = false;
         }
     }
 
     public void CaughtPlayer()
     {
         m_IsPlayerCaught = true;
+        m_Demo_GameTimerIsTicking = false;
     }
 
     void Update()
