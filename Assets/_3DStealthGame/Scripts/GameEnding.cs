@@ -4,6 +4,9 @@ using UnityEngine.UIElements;
 
 public class GameEnding : MonoBehaviour
 {
+    private float m_Demo_GameTimer = 0f;
+    private bool m_Demo_GameTimerIsTicking = false;
+    private Label m_Demo_GameTimerLabel;
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
     public GameObject player;
@@ -24,6 +27,10 @@ public class GameEnding : MonoBehaviour
     {
         m_EndScreen = uiDocument.rootVisualElement.Q<VisualElement>("EndScreen");
         m_CaughtScreen = uiDocument.rootVisualElement.Q<VisualElement>("CaughtScreen");
+        m_Demo_GameTimerLabel = uiDocument.rootVisualElement.Q<Label>("TimerLabel");
+        m_Demo_GameTimer = 0.0f;
+        m_Demo_GameTimerIsTicking = true;
+        Demo_UpdateTimerLabel();
     }
 
     void OnTriggerEnter(Collider other)
@@ -41,6 +48,12 @@ public class GameEnding : MonoBehaviour
 
     void Update()
     {
+        if (m_Demo_GameTimerIsTicking)
+        {
+            m_Demo_GameTimer += Time.deltaTime;
+            Demo_UpdateTimerLabel();
+        }
+
         if (m_IsPlayerAtExit)
         {
             EndLevel(m_EndScreen, false, exitAudio);
@@ -73,5 +86,10 @@ public class GameEnding : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+    }
+
+    void Demo_UpdateTimerLabel()
+    {
+        m_Demo_GameTimerLabel.text = m_Demo_GameTimer.ToString("0.00");
     }
 }
